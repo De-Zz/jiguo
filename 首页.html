@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="./js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/头.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+    <link rel="stylesheet" href="./css/低.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .ia{
+            position: relative;
+        }
+        .idh{
+            width: 400px;
+            position: absolute;
+            top: 50px;
+            right: 276px;
+            text-align: center;
+            animation: anniu 1s;
+        }
+        .idh h1{
+            color: white;
+        }
+        .idh ul{
+            display: flex;
+            flex-direction: row;
+            margin-left: 70px;
+            margin-top: 20px;
+            
+        }
+        .idh ul li{
+            margin-left: 10px;
+        }
+        .idh ul li:nth-of-type(1){
+            box-sizing: border-box;
+            /* padding-left: 10px; */
+            font-size: 16px;
+            width:100px;
+            height: 30px;
+            padding-top: 6px;
+            box-sizing: border-box;
+            background-color: rgba(238, 228, 213, 0.2);
+            color: white;
+            border-radius: 5px;
+        }
+        .idh ul li:nth-of-type(2){
+            box-sizing: border-box;
+            /* padding-left: 10px; */
+            font-size: 16px;
+            width:60px;
+            height: 30px;
+            padding-top: 6px;
+            box-sizing: border-box;
+            background-color: rgba(238, 228, 213, 0.2);
+            color: white;
+            border-radius: 5px;
+        }
+        .idh ul li:nth-of-type(3){
+            box-sizing: border-box;
+            
+            /* padding-left: 10px; */
+            font-size: 16px;
+            width:50px;
+            height: 30px;
+            padding-top: 6px;
+            box-sizing: border-box;
+            background-color: rgba(238, 228, 213, 0.2);
+            color: white;
+            border-radius: 5px;
+        }
+
+        .str_{
+            margin-top: 20px;
+            box-sizing: border-box;
+            color: white;
+        }
+        .idh button{
+            width: 200px;
+            height: 40px;
+            background-color: rgb(254,83,65);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            cursor: pointer;
+           
+        }
+        
+        @keyframes anniu {
+            from {
+                transform: rotate(45deg);
+                transform: translate(45px,-20px);
+            }
+            to{
+                transform: rotate(0deg);
+            }
+        }
+
+
+
+        .mian{
+            width: 1000px;
+            height: 340px;
+            margin: 0 auto;
+        }
+        .mian p:nth-of-type(1){
+            font-weight: 700;
+            
+            /* box-sizing: border-box; */
+            margin: 20px 0 20px 5px;
+        }
+
+        .swiper-container{
+            width: 1100px;
+            height: 285px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: absolute;
+            left:280px;
+        }
+        .swiper-wrapper{
+            width:100%;
+            height:100%;
+            position: absolute;
+            
+        }
+
+        .swiper-slide{
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .lun{
+            width: 220px;
+            height: 285px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin:0px 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .lun img{
+            width: 220px;
+            height: 120px;
+        }
+        .biaoti{
+            text-align: center;
+            margin-top: 10px;
+        }
+        .lun span{
+            width: 60px;
+            height: 20px;
+            margin:0 auto;
+            display: inline-block;
+        }
+        .lun span:nth-of-type(1){
+            color: chocolate;
+            border: 1px solid chocolate;
+            border-radius: 5px;
+            text-align: center;
+            margin-left:37px;
+        }
+        .lun span:nth-of-type(2){
+            color: chocolate;
+            border: 1px solid chocolate;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .p1{
+            margin-left: -30px;
+            margin-top: -10px;
+            box-sizing: border-box;
+        }
+        .p1 p:nth-of-type(1){
+            display: inline-block;
+            color: chocolate;
+            border: none;
+            margin: 20px 0 20px 100px;
+        }
+        .p2{
+            color: chocolate;
+            margin-left: 55px;
+            margin-top: -15px;
+        }
+        .swiper-button-prev{
+            color: #ccc;
+            margin-left: -10px;
+            box-sizing: border-box;
+        }
+        .swiper-button-next{
+            color: #ccc;
+            margin-right: 48px;
+            box-sizing: border-box;
+        }
+
+
+        .gengduo{
+            height: 60px;
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .gengduo1{
+            position: absolute;
+            top:20px;
+            right: 86px;
+            
+        }
+        .gengduo1 a{
+            text-decoration: none;
+            color: coral;
+        }
+        .gengduo2{
+            position: absolute;
+            top: 20px;
+            left:106px;
+        }
+        .tuwang {
+            width: 1200px;
+            height: 590px;
+            margin:0 auto;
+            background-color: rgb(247,247,247);
+        }
+        .tuwang1{
+            width: 1000px;
+            height: 590px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .tu{
+            width: 220px;
+            height: 230px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .tu>p{
+            text-align: center;
+            font-size: 14px;
+            
+        }
+        .tu img{
+            width: 220px;
+            height: 130px;
+        }
+        .tu1{
+            width: 220px;
+          display: flex;
+          justify-content: space-between;
+        }
+        .tu1>p{
+            color: #ccc;
+        }
+  
+        
+        .tu2 img{
+            width: 12px;
+            height: 12px;
+          flex-direction: row; 
+         
+        }
+       .tu1>.tu2>span{
+            color: #ccc;
+        }
+
+        /* 报告精选 */
+.report_selected{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(247,247,247);
+}
+.navigation_report{
+    width: 1000px;
+    height: 40px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 40px;
+}
+.navigation_report>p:nth-of-type(1){
+    font-size: 20px;
+    font-weight: 400;
+}
+.navigation_report>p:nth-of-type(2){
+    font-size: 15px;
+    color: red;
+}
+.navigation_report span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("./img/readMore.png") no-repeat 2px 2px;
+    vertical-align: -2px;
+}
+
+
+.report_content{
+    width: 1000px;
+    height: 560px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.report_content>li{
+    width: 22%;
+    height: 240px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.report_content>li>img{
+    width: 100%;
+    border-radius: 5px;
+}
+.report_content>li>p{
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 0px 5px 0px 5px;
+    box-sizing: border-box;
+}
+.report_content>li>div{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 30px;
+    padding: 0px 5px 0px 5px;
+    box-sizing: border-box;
+}
+.report_content>li>div>p>span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: -2px;
+}
+#tu1{
+    background: url(./img/zan.png) no-repeat 0px 0px;
+}
+#tu2{
+    background: url(./img/reply.png) no-repeat 0px 0px;
+}
+
+
+/* 导购精选 */
+.Shoppers_select{
+    width: 100%;
+    height: 350px;
+}
+.navigation_Shoppers{
+    width: 1000px;
+    height: 40px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 40px;
+}
+.navigation_Shoppers>p:nth-of-type(1){
+    font-size: 20px;
+    font-weight: 400;
+}
+.navigation_Shoppers>p:nth-of-type(2){
+    font-size: 15px;
+    color: red;
+}
+.navigation_Shoppers span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("./img/readMore.png") no-repeat 2px 2px;
+    vertical-align: -2px;
+}
+
+
+.Shoppers_content{
+    width: 1000px;
+    height: 290px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+.Shoppers_content>li{
+    width: 23%;
+    height: 270px;
+    border-radius: 5px;
+    background-color: white;
+}
+.Shoppers_content>li>img{
+    width: 100%;
+    border-radius: 5px;
+}
+.Shoppers_content>li>p{
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 0px 5px 0px 5px;
+    box-sizing: border-box;
+}
+.Shoppers_content>li>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 10px;
+}
+.Shoppers_content>li>div>P>span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: -2px;
+    margin-left: 5px;
+}
+#tu3{
+    background: url(./img/xin.png) no-repeat 0px 0px;
+}
+
+
+/* 发现酷玩 */
+.found_that_coldplay{
+    width: 100%;
+    height: 1100px;
+    background-color: rgb(247,247,247);
+}
+.navigation_coldplay{
+    width: 1000px;
+    height: 40px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 40px;
+}
+.navigation_coldplay>p:nth-of-type(1){
+    font-size: 20px;
+    font-weight: 400;
+}
+.navigation_coldplay>p:nth-of-type(2){
+    font-size: 15px;
+    color: red;
+}
+.found_that_coldplay span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("./img/readMore.png") no-repeat 2px 2px;
+    vertical-align: -2px;
+} 
+
+.coldplay_content{
+    width: 1000px;
+    height: 560px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.coldplay_content>li{
+    width: 22%;
+    height: 240px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.coldplay_content>li>img{
+    width: 100%;
+    border-radius: 5px;
+}
+.coldplay_content>li>p{
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 0px 5px 0px 5px;
+    box-sizing: border-box;
+}
+.coldplay_content>li>div{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 30px;
+    padding: 0px 5px 0px 5px;
+    box-sizing: border-box;
+}
+#coldplay_price{
+    color: red;
+}
+.coldplay_content>li>div>p>span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: -2px;
+}
+    </style>
+</head>
+<body>
+    <!-- 头 -->
+    <div class="header">
+        <span><img src="./img/logonew.png" alt=""></span>
+        <ul>
+            <li><a href="">首页</a></li>
+            <li><a href="">酷玩</a></li>
+            <li><a href="">导购</a></li>
+            <li><a href="">适用</a></li>
+            <li><a href="">报告</a></li>
+        </ul>
+        <span><a href=""><img src="./img/search.png" alt=""></a></span>
+
+        <span><a href="">注册</a></span>
+    </div>
+<!-- 大图 -->
+
+    <div class="ia">
+        <img src="./img/original.jpg" alt="" width="100%" height="300px">
+        <div class="idh">
+            <h1>幻响小贝HiFi2.1音箱</h1>
+            <ul>
+                <li><span class="num_">126</span>人申请</li>
+                <li>￥599</li>
+                <li class="tai">20台</li>
+            </ul>
+       
+            <div class="str_"></div>
+            <br>
+            <button>立即申请</button>
+        </div>
+    </div>
+
+
+<!-- 轮播 -->
+
+    <div class="mian">
+        <p>热门试用</p>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="lun">
+                        <img src="http://192.168.31.5:3000/img/hot1.jpg" alt="" width="220px" height="120px">
+                        <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                        <span>2032</span>
+                        <span>20台</span>
+                        <div class="p1"><p>1392</p>申请</div>
+                        <div class="p2">剩余时间2天</div>
+                    </div>
+                    <div class="lun">
+                        <img src="http://192.168.31.5:3000/img/hot2.jpg" alt="" width="220px" height="120px">
+                        <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                        <span>2032</span>
+                        <span>20台</span>
+                        <div class="p1"><p>1392</p>申请</div>
+                        <div class="p2">剩余时间2天</div>
+                    </div>
+                    <div class="lun">
+                        <img src="http://192.168.31.5:3000/img/hot3.jpg" alt="" width="220px" height="120px">
+                        <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                        <span>2032</span>
+                        <span>20台</span>
+                        <div class="p1"><p>1392</p>申请</div>
+                        <div class="p2">剩余时间2天</div>
+                    </div>
+                    <div class="lun">
+                        <img src="http://192.168.31.5:3000/img/hot4.jpg" alt="" width="220px" height="120px">
+                        <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                        <span>2032</span>
+                        <span>20台</span>
+                        <div class="p1"><p>1392</p>申请</div>
+                        <div class="p2">剩余时间2天</div>
+                    </div>
+                </div>
+         
+           
+            <div class="swiper-slide">
+                <div class="lun">
+                    <img src="http://192.168.31.5:3000/img/hot4.jpg" alt="" width="220px" height="120px">
+                    <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                    <span>2032</span>
+                    <span>20台</span>
+                    <div class="p1"><p>1392</p>申请</div>
+                    <div class="p2">剩余时间2天</div>
+                </div>
+                <div class="lun">
+                    <img src="http://192.168.31.5:3000/img/hot3.jpg" alt="" width="220px" height="120px">
+                    <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                    <span>2032</span>
+                    <span>20台</span>
+                    <div class="p1"><p>1392</p>申请</div>
+                    <div class="p2">剩余时间2天</div>
+                </div>
+                <div class="lun">
+                    <img src="http://192.168.31.5:3000/img/hot2.jpg" alt="" width="220px" height="120px">
+                    <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                    <span>2032</span>
+                    <span>20台</span>
+                    <div class="p1"><p>1392</p>申请</div>
+                    <div class="p2">剩余时间2天</div>
+                </div>
+                <div class="lun">
+                    <img src="http://192.168.31.5:3000/img/hot1.jpg" alt="" width="220px" height="120px">
+                    <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                    <span>2032</span>
+                    <span>20台</span>
+                    <div class="p1"><p>1392</p>申请</div>
+                    <div class="p2">剩余时间2天</div>
+                </div>
+            </div>
+     
+      
+        <div class="swiper-slide">
+            <div class="lun">
+                <img src="http://192.168.31.5:3000/img/hot3.jpg" alt="" width="220px" height="120px">
+                <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                <span>2032</span>
+                <span>20台</span>
+                <div class="p1"><p>1392</p>申请</div>
+                <div class="p2">剩余时间2天</div>
+            </div>
+            <div class="lun">
+                <img src="http://192.168.31.5:3000/img/hot2.jpg" alt="" width="220px" height="120px">
+                <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                <span>2032</span>
+                <span>20台</span>
+                <div class="p1"><p>1392</p>申请</div>
+                <div class="p2">剩余时间2天</div>
+            </div>
+            <div class="lun">
+                <img src="http://192.168.31.5:3000/img/hot1.jpg" alt="" width="220px" height="120px">
+                <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                <span>2032</span>
+                <span>20台</span>
+                <div class="p1"><p>1392</p>申请</div>
+                <div class="p2">剩余时间2天</div>
+            </div>
+            <div class="lun">
+                <img src="http://192.168.31.5:3000/img/hot4.jpg" alt="" width="220px" height="120px">
+                <div class="biaoti">巴慕达 The Toaster 烤面包机</div>
+                <span>2032</span>
+                <span>20台</span>
+                <div class="p1"><p>1392</p>申请</div>
+                <div class="p2">剩余时间2天</div>
+            </div>
+        </div>
+ 
+    </div>
+            <!-- 如果需要分页器
+            <div class="swiper-pagination"></div> -->
+            
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+</div>
+        <!-- 报告精选 -->
+        <div class="report_selected">
+            <div class="navigation_report">
+                <p>报告精选</p>
+                <p>查看更多<span></span></p>
+            </div>
+            <div class="report_content">
+                <!-- <li>
+                    <img src="http://192.168.31.5:3000/img/hot7.jpg" alt="">
+                    <p>风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器</p>
+                    <div class="report_content_name">
+                        <p>长安</p>
+                        <p><span></span>3<span></span>3</p>
+                    </div>
+                </li> -->
+            </div>
+        </div>
+
+        <!-- 导购精选 -->
+        <div class="Shoppers_select">
+            <div class="navigation_Shoppers">
+                <p>导购精选</p>
+                <p>查看更多<span></span></p>
+            </div>
+            <div class="Shoppers_content">
+                    <!-- <li>
+                        <img src="http://192.168.31.5:3000/img/hot7.jpg" alt="">
+                        <p>风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器</p>
+                        <div class="report_content_name">
+                            <p><span id="tu3"></span>3<span id="tu2"></span>3</p>
+                        </div>
+                    </li> -->
+            </div>
+        </div>
+
+
+        <!-- 发现酷玩 -->
+        <div class="found_that_coldplay">
+            <div class="navigation_coldplay">
+                <p>发现酷玩</p>
+                <p>查看更多<span></span></p>
+            </div>
+            <div class="coldplay_content">
+                    <!-- <li>
+                        <img src="http://192.168.31.5:3000/img/hot7.jpg" alt="">
+                        <p>风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器</p>
+                        <div class="report_content_name">
+                            <p id="coldplay_price">￥489</p>
+                            <p><span id="tu1"></span>3<span id="tu2"></span>3</p>
+                        </div>
+                    </li> -->
+            </div>
+        </div>
+
+
+
+
+        <!-- 底部 -->
+        <div class="footer">
+            <footer class="foot">
+                <section class="wrap">
+                    <div class="fix">
+                        <dl><img src="img/code.png" width="200" height="200"/></dl>
+                        <dl>
+                            <dt><img src="img/logoImg.jpg"/></dt>
+                            <dd>全球酷玩试用导购平台<br>酷·新奇·好玩·品质</dd>
+                            <dd>微信添加“JguoJguo” <br>获取我们的服务。</dd>
+                        </dl>
+                        <dl>
+                            <dt>免费试用</dt>
+                            <dd><a href="help.html#lc">试用流程</a></dd>
+                            <dd><a href="help.html#cg">如何提高成功率</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>友情链接</dt>
+                            <dd><a href="#">智东西</a><a href="#">WEIBUSI</a></dd>
+                            <dd><a href="#">搜狐IT</a><a href="#">腾讯科技</a></dd>
+                            <dd><a href="#">搜狐数码</a><a href="#">凤凰科技</a></dd>
+                            <dd><a href="#">凤凰数码</a><a href="#">PConline</a></dd>
+                            <dd><a href="#">泡泡网</a><a href="#">3W咖啡</a></dd>
+                            <dd><a href="#">ZUK社区</a><a href="#">亿觅emie</a></dd>
+                            <dd><a href="#">极客公园</a><a href="#">易迅易启玩</a></dd>
+                            <dd><a href="#">果库</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>购买攻略</dt>
+                            <dd><a href="#">美亚海淘教程</a></dd>
+                            <dd><a href="#">日亚海淘教程</a></dd>
+                            <dd><a href="#">海淘转运攻略</a></dd>
+                            <dd><a href="#">kickstarter 众筹购买攻略</a></dd>
+                            <dd><a href="#">indiegogo 众筹购买攻略</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>厂商合作</dt>
+                            <dd><a href="about.html">关于极果</a></dd>
+                            <dd><a href="about.html#connect">联系我们</a></dd>
+                            <dd><a href="mailto:BD@jiguo.com">商务合作：BD@jiguo.com</a></dd>
+                            <dd><a href="mailto:CEO@jiguo.com">CEO邮箱：CEO@jiguo.com</a></dd>
+                        </dl>
+                    </div>
+                   
+                </section>
+                
+            </footer>
+            <p class="copy">© 2016 极果版权所有</p>
+        </div>
+</body>
+</html>
+<script>        
+    var mySwiper = new Swiper ('.swiper-container', {
+      direction: 'horizontal', // 水平切换选项
+      autoplay:true,
+      loop: true, // 循环模式选项
+      
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })        
+
+
+    function arr(){
+        var nowTime = new Date();
+        var goTime = new Date(2021,10,29);
+        var time = goTime - nowTime;
+        var day =Math.floor(time/1000/60/60/24);
+        var h = Math.floor(time/1000/60/60%24);
+        h = h>9?h:'0'+h;
+        var m = Math.floor(time/1000/60%60);
+        m = m>9?m:'0'+m;                
+        var str = '申请时间剩余：'+day+'天'+h+'小时'+m+'分钟';
+        var div_ = document.getElementsByClassName('str_')[0];
+        div_.innerHTML=str;
+    } 
+    setInterval(arr,1000);
+   arr();
+
+    function anniu(){
+        let button_ = document.getElementsByTagName('button')[0];
+        let num_ = document.getElementsByClassName('num_')[0];
+        let tai_ = document.getElementsByClassName('tai')[0];
+        let num = '';
+        button_.onclick=function(){
+            num_.innerHTML=parseInt(num_.innerHTML)+1;
+            // tai_.innerHTML=parseInt(tai_.innerHTML)-1;
+        }
+    }
+
+anniu();
+   
+           // 报告精选渲染
+    function reportSelected(){
+        var report_content=document.getElementsByClassName('report_content')[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/useing/public'
+        }).then(response=>{
+            let str1=JSON.stringify(response)
+            var str = "";
+            for (let i = 4; i <=11; i++){
+                str += `<li>
+                    <img src="${response.data[i].img}">
+                    <p>${response.data[i].text}</p>
+                    <div>
+                        <p>${response.data[i].uName}</p>
+                        <p>
+                            <span id="tu1">
+                            </span>
+                            3
+                            <span id="tu2">
+                            </span>
+                            3
+                        </p>
+                    </div>
+                </li>`
+            }
+            report_content.innerHTML=str;
+        })
+    }
+    reportSelected();
+    
+
+    // 导购精选渲染
+    function shoppersRendering(){
+        var Shoppers_content=document.getElementsByClassName('Shoppers_content')[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/useing/public'
+        }).then(response=>{
+            let str1=JSON.stringify(response)
+            var str = "";
+            for (let i = 1; i <=4; i++){
+                str += `<li>
+                    <img src="${response.data[i].img}">
+                    <p>${response.data[i].text}</p>
+                    <div>
+                        <p>
+                            <span id="tu3">
+                            </span>
+                            3
+                            <span id="tu2">
+                            </span>
+                            3
+                        </p>
+                    </div>
+                </li>`
+            }
+            Shoppers_content.innerHTML=str;
+        })
+    }
+    shoppersRendering();
+
+    // 发现酷玩渲染
+    function foundThatColdplay(){
+        var coldplay_content=document.getElementsByClassName('coldplay_content')[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/play/hot'
+        }).then(response=>{
+            console.log(response);
+            // let str1=JSON.stringify(response)
+            // console.log(str1);
+            var str = "";
+            for(let k=1;k<3;k++){
+            for (let i = 0; i <response.data[k].length; i++){
+                str += `<li>
+                    <img src="${response.data[k][i].img}">
+                    <p>${response.data[k][i].text}</p>
+                    <div>
+                        <p id="coldplay_price">${response.data[k][i].price}</p>
+                        <p>
+                            <span id="tu3">
+                            </span>
+                            3
+                            <span id="tu2">
+                            </span>
+                            3
+                        </p>
+                    </div>
+                </li>`
+            }}
+            coldplay_content.innerHTML=str;
+        })
+    }
+    foundThatColdplay();
+    </script>
