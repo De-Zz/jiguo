@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>导购最新</title>
     <link rel="stylesheet" href="./css/头.css">
-    <link rel="stylesheet" href="./css/酷玩.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+    <link rel="stylesheet" href="./css/导购.css">
     <link rel="stylesheet" href="./css/低.css">
+    
 </head>
 <body>
+    
+
     <div class="header">
         <span><img src="./img/logonew.png" alt=""></span>
         <ul>
@@ -26,22 +29,22 @@
     </div>
 
 
+
+
     <div class="nav">
-        <p>发现酷玩</p>
+        <p>导购清单</p>
     </div>
     <div class="nav1">
         <p><a href="">最新</a></p>
         <p><a href="">最热</a></p>
-        <p><a href="">品类</a></p>
     </div>
 
     <div class="main">
         <div class="main1">
-                    <!-- 发现酷玩 -->
         <div class="found_that_coldplay">
             <div class="coldplay_content">
                     <!-- <li>
-                        <img src="http://192.168.31.5:3000/img/hot7.jpg" alt="">
+                        <img src="http://192.168.31.5:3000/guid/new.jpg" alt="">
                         <p>风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器</p>
                         <div class="report_content_name">
                             <p id="coldplay_price">￥489</p>
@@ -52,6 +55,8 @@
         </div>
         </div>
     </div>
+
+
     <div class="footer">
     	<footer class="foot">
             <section class="wrap">
@@ -103,18 +108,14 @@
 </body>
 </html>
 <script>
-
-     // 发现酷玩渲染
-     function foundThatColdplay(){
+      function foundThatColdplay(){
         var coldplay_content=document.getElementsByClassName('coldplay_content')[0];
         axios({
             method:'get',
-            url:'http://192.168.31.5:3000/play/new'
+            url:'http://192.168.31.5:3000/play/hot'
         }).then(response=>{
-            console.log(response);
-            // let str1=JSON.stringify(response)
-            // console.log(str1);
             var str = "";
+            console.log(response);
             for(let k=1;k<3;k++){
             for (let i = 0; i <response.data[k].length; i++){
                 str += `<li>
@@ -137,5 +138,5 @@
         })
     }
     foundThatColdplay();
-
+    
 </script>
