@@ -107,8 +107,8 @@
 
         .mian{
             width: 1000px;
+            height: 340px;
             margin: 0 auto;
-            
         }
         .mian p:nth-of-type(1){
             font-weight: 700;
@@ -203,13 +203,14 @@
 
 
         .gengduo{
+            height: 60px;
             width: 1200px;
             margin: 0 auto;
             position: relative;
         }
         .gengduo1{
             position: absolute;
-            top:303px;
+            top:20px;
             right: 86px;
             
         }
@@ -219,8 +220,56 @@
         }
         .gengduo2{
             position: absolute;
-            top: 303px;
-            left: 106px;
+            top: 20px;
+            left:106px;
+        }
+        .tuwang {
+            width: 1200px;
+            height: 590px;
+            margin:0 auto;
+            background-color: rgb(247,247,247);
+        }
+        .tuwang1{
+            width: 1000px;
+            height: 590px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .tu{
+            width: 220px;
+            height: 230px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .tu>p{
+            text-align: center;
+            font-size: 14px;
+            
+        }
+        .tu img{
+            width: 220px;
+            height: 130px;
+        }
+        .tu1{
+            width: 220px;
+          display: flex;
+          justify-content: space-between;
+        }
+        .tu1>p{
+            color: #ccc;
+        }
+  
+        
+        .tu2 img{
+            width: 12px;
+            height: 12px;
+          flex-direction: row; 
+         
+        }
+       .tu1>.tu2>span{
+            color: #ccc;
         }
     </style>
 </head>
@@ -379,13 +428,29 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-
-        
 </div>
 
 
 
-<!-- 渲染 -->
+<!-- 渲染
+    <div class="gengduo">
+        <div class="gengduo2">
+            <p>报告精选</p>
+           </div>
+        <div class="gengduo1">
+             <a href="">查看更多</a>
+             <span><img src="./img/readMore.png" alt=""></span>
+           </div>
+           </div> -->
+
+
+           <!-- 渲染 -->
+
+
+
+ 
+<div class="tuwang">
+
     <div class="gengduo">
         <div class="gengduo2">
             <p>报告精选</p>
@@ -395,11 +460,20 @@
              <span><img src="./img/readMore.png" alt=""></span>
            </div>
            </div>
-
-
-           <div class="lie">
-               
-           </div>
+           <div class="tuwang1">
+          <div class="tu">
+              <img src="./img/bg1.jpg" alt="">
+              <p>空气净化器里面学问多得惊呆你，你选对了吗？</p>
+              <div class="tu1">
+                 <p>● 苏苏</p> 
+                 <div class="tu2">
+                 <img src="./img/zan.png" alt=""><span id="tu4">3</span>
+                 <img src="./img/reply.png" alt=""><span id="tu5">3</span>
+                </div>
+                </div>
+              </div>
+          </div> 
+        </div>
 
 </body>
 </html>
