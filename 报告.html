@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/头.css">
-    <link rel="stylesheet" href="./css/酷玩.css">
-    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+    <link rel="stylesheet" href="./css/报告.css">
     <link rel="stylesheet" href="./css/低.css">
 </head>
 <body>
     <div class="header">
         <span><img src="./img/logonew.png" alt=""></span>
         <ul>
-            <li><a href="./首页.html">首页</a></li>
+            <li><a href="">首页</a></li>
             <li><a href="">酷玩</a></li>
             <li><a href="">导购</a></li>
             <li><a href="">适用</a></li>
@@ -25,33 +24,60 @@
         <span><a href="">注册</a></span>
     </div>
 
-
     <div class="nav">
-        <p>发现酷玩</p>
+        <p>体检报告</p>
     </div>
-    <div class="nav1">
-        <p><a href="">最新</a></p>
-        <p><a href="">最热</a></p>
-        <p><a href="">品类</a></p>
-    </div>
+
+    <ul class="goum">
+        <li> <a class="on" onclick="report()">最新</a></li>
+        <li><a class="hot" onclick="rhot()">最热</a></li>
+    </ul>
+
+
 
     <div class="main">
-        <div class="main1">
-                    <!-- 发现酷玩 -->
-        <div class="found_that_coldplay">
-            <div class="coldplay_content">
-                    <!-- <li>
-                        <img src="http://192.168.31.5:3000/img/hot7.jpg" alt="">
-                        <p>风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器</p>
-                        <div class="report_content_name">
-                            <p id="coldplay_price">￥489</p>
-                            <p><span id="tu1"></span>3<span id="tu2"></span>3</p>
-                        </div>
-                    </li> -->
-            </div>
+
+    <div class="content">
+
+        <div class="content_box">
+
+            <ul class="left">
+
+            </ul>
+
+            <aside class="right">
+
+                <div class="try">
+                    <h2>极果体验师</h2>
+                    <div>
+                        <img src="./img/tiyanImg.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="fuli">
+                    <h5>福利</h5>
+                    <p>第一时间体验新品，大众试用优先通过，还有定向邀请试用，新品玩到手软</p>
+                    <h5>要求</h5>
+                    <p>是某个领域的大神级玩家，在社交网络或圈子里有大影响力，善写作会拍摄。</p>
+                    <h5>申请</h5>
+                    <p>1. 关注极果公众号：jguojguo
+                        （或扫描下方二维码）</p>
+                    <p>
+                        2. 在公众号内回复：体验师
+                    </p>
+                </div>
+
+                <div class="erweima">
+                    <img src="./img/myCode.jpg" alt="">
+                </div>
+
+            </aside>
+
         </div>
-        </div>
+
     </div>
+    </div>
+
     <div class="footer">
     	<footer class="foot">
             <section class="wrap">
@@ -100,40 +126,48 @@
         </footer>
         <p class="copy">© 2016 极果版权所有</p>
     </div>
+
+
 </body>
 </html>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+
 <script>
-     // 发现酷玩渲染
-     function foundThatColdplay(){
-        var coldplay_content=document.getElementsByClassName('coldplay_content')[0];
+
+    function report(){
+
+        var box = document.getElementsByClassName('left')[0];
         axios({
             method:'get',
-            url:'http://192.168.31.5:3000/play/new'
+            url:'http://192.168.31.5:3000/report/new'
         }).then(response=>{
-            console.log(response);
-            // let str1=JSON.stringify(response)
-            // console.log(str1);
-            var str = "";
-            for(let k=1;k<3;k++){
-            for (let i = 0; i <response.data[k].length; i++){
-                str += `<li>
-                    <img src="${response.data[k][i].img}">
-                    <p>${response.data[k][i].text}</p>
-                    <div>
-                        <p id="coldplay_price">${response.data[k][i].price}</p>
-                        <p>
-                            <span id="tu3">
-                            </span>
-                            3
-                            <span id="tu2">
-                            </span>
-                            3
-                        </p>
-                    </div>
-                </li>`
-            }}
-            coldplay_content.innerHTML=str;
+            console.log(response.data);
+            console.log(response.data[0].img);
+            var str='';
+                for(k=0;k<3;k++){
+                    str+=`
+                    <li>
+                        <a>
+                            <img src="${response.data[k].img}">
+                            <div class='info'>
+                                <p>${response.data[k].text}</p>
+                                <div class='btm'>
+                                    <div>
+                                        <span>${response.data[k].uName}</span>
+                                        <span>${response.data[k].endTime}</span>      
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    `
+                }
+            box.innerHTML=str
+
         })
+
+
     }
-    foundThatColdplay();
-</script>
+
+    report();
+    </script>
