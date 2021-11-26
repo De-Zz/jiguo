@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .boxc{
+            width: 100%;
+            background-color: #f7f7f7;
+            
+            
+        }
+        .pinlei{
+            width: 1000px;
+            
+           
+            border-radius: 10px;
+            margin: 122px auto;
+        }
+        
+a{
+    text-decoration: none;
+} 
+p{
+    font-size: 14px;
+    color: #a3a3a3;
+}
+ul{
+    list-style: none;
+}     
+.pad25{
+    padding-top:25px;
+}
+.play-top h1{
+    text-align:center;padding:34px 0 30px;font-size:40px;
+}
+.play-nav{
+    text-align:center;line-height:1.7;font-size:0;
+}
+.play-nav a{
+    display:inline-block;padding-bottom:12px;width:165px;font-size:18px;
+}
+.play-nav a.on{
+    border-bottom:4px #fe5431 solid;padding-bottom:8px;
+}
+.use-box{
+    border-top:1px solid #f0f0f0;
+}
+.use-nav{
+    font-size:0;text-align:center;height:50px;line-height:50px;overflow:hidden;
+}
+.use-nav a{
+    display:inline-block;width:165px;font-size:18px
+    ;}
+
+.category{
+    padding-bottom:5px;
+}
+.category li{
+    margin-bottom:35px;border:1px solid #ebecec;border-radius:6px;background-color: #fff;
+}
+.category li dt{
+    position:relative;padding:19px 0 19px 30px;font-size:16px;line-height:25px;
+}
+.category li dt::before{
+    content:'';position:absolute;left:0;top:19px;display:block;width:6px;height:25px;
+}
+.category li dd{
+    padding:0 13px 18px;
+}
+.category li dd:after{
+    clear:both;content:"";display:block;height:0;visibility:hidden;
+}
+.category li dd:nth-child(3){
+    border-top:1px dashed #e0e0e0;padding-bottom:35px;
+}
+.category dd .list{
+    float:left;width:150px;text-align:center;font-size:14px;margin-top:17px;
+}
+.category li dd:last-child .list{
+    margin-top:0;
+}
+.category dd .list .info{
+    padding-top:12px;
+}
+.report-box .use dt{
+    margin-bottom:35px;background:#fff;
+}
+
+
+
+
+.footer{
+            width: 100%;
+            height: 360px;
+            background-color: rgb(80,80,80);
+            margin-top: -123px;
+            
+        }
+
+        .foot{
+            width: 1200px;
+            margin: 0 auto;
+           
+        }
+        .foot a{
+            text-decoration: none;
+            color:  rgb(15, 14, 14);
+        }
+        .foot a:hover{
+            color: white;
+        }
+        dl dd{
+            margin:0 auto;
+        }
+        .foot{
+            padding:40px 0 15px;
+        }
+        .foot dl{
+            float:left;
+            font-size:13px;
+            padding-left:42px;
+            line-height:20px;
+        }
+        .foot dl dt{
+            font-size:16px;
+            padding-bottom:25px;
+        }
+        .foot dl:nth-child(2) dd:last-child{
+            margin-top:13px;
+        }
+        .foot dl:nth-child(4) dd a{
+            display:inline-block;
+            width:69px;
+        }
+        .foot dl:nth-child(1){
+            padding-left:0;
+        }
+        .foot dl:nth-child(2){
+            width:140px;
+        }
+        .foot dl:nth-child(3){
+            width:100px;
+        }
+        .foot dl:nth-child(4){
+            width:140px;
+        }
+        .foot dl:nth-child(5){
+            width:148px;
+        }
+        .foot dl:nth-child(6){
+            width:180px;
+        }
+        .copy{    
+            text-align:center;
+            padding-top:280px;
+            font-size:13px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <iframe src="./index.html" width="100%" height="60px" frameborder="0"></iframe>
+    </div> 
+    <div class="boxc"> 
+        <div class="pinlei">
+            <three class="report-box">
+                <div class="wrap category pad25">
+                    <ul>
+                        <!--生活-->
+                        <li>
+                            <dl>
+                                <dt>生活</dt>
+                                <dd>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_1.png"/>
+                                            <p class="info">空气净化器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_2.png"/>
+                                            <p class="info">吸尘器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_3.png"/>
+                                            <p class="info">电风扇（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_4.png"/>
+                                            <p class="info">扫地机器人（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_5.png"/>
+                                            <p class="info">净水壶（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_6.png"/>
+                                            <p class="info">电饭煲（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_7.png"/>
+                                            <p class="info">咖啡机（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_8.png"/>
+                                            <p class="info">原汁机（21）</p>
+                                        </a>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">电视（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">空调（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">洗衣机（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">加湿器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">净水壶（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">热水器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">咖啡机（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">原汁机（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">消毒/洗碗机（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">豆浆机（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">扫地机器人（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">电风扇（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">除湿机（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">干燥机（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">取暖器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">原汁机（21）</p>
+                                        </a>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <!--个人护理-->
+                        <li>
+                            <dl>
+                                <dt>个人护理</dt>
+                                <dd>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_9.png"/>
+                                            <p class="info">电动牙刷（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_10.png"/>
+                                            <p class="info">剃须刀（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_11.png"/>
+                                            <p class="info">按摩器（21）</p>
+                                        </a>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">冲牙器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">洁面仪（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">蒸面器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">加湿器（21）</p>
+                                        </a>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <!-- 健康 -->
+                        <li>
+                            <dl>
+                                <dt>健康</dt>
+                                <dd>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_1.png"/>
+                                            <p class="info">空气净化器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_2.png"/>
+                                            <p class="info">吸尘器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <img src="./img/cat_3.png"/>
+                                            <p class="info">电风扇（21）</p>
+                                        </a>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">冲牙器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">洁面仪（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">蒸面器（21）</p>
+                                        </a>
+                                    </div>
+                                    <div class="list">
+                                        <a href="">
+                                            <p class="info">加湿器（21）</p>
+                                        </a>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                   <!-- 智能穿戴 -->
+                   <li>
+                    <dl>
+                        <dt>智能穿戴</dt>
+                        <dd>
+                            <div class="list">
+                                <a href="">
+                                    <img src="./img/cat_9.png"/>
+                                    <p class="info">电动牙刷（21）</p>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="">
+                                    <img src="./img/cat_4.png"/>
+                                    <p class="info">扫地机器人（21）</p>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="">
+                                    <img src="./img/cat_5.png"/>
+                                    <p class="info">净水壶（21）</p>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="">
+                                    <img src="./img/cat_6.png"/>
+                                    <p class="info">电饭煲（21）</p>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="">
+                                    <img src="./img/cat_7.png"/>
+                                    <p class="info">咖啡机（21）</p>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="">
+                                    <img src="./img/cat_8.png"/>
+                                    <p class="info">原汁机（21）</p>
+                                </a>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="list">
+                                <a href="">
+                                    <p class="info">冲牙器（21）</p>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="">
+                                    <p class="info">洁面仪（21）</p>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="">
+                                    <p class="info">蒸面器（21）</p>
+                                </a>
+                            </div>
+                            <div class="list">
+                                <a href="">
+                                    <p class="info">加湿器（21）</p>
+                                </a>
+                            </div>
+                        </dd>
+                    </dl>
+                </li>
+       <!-- 出行 -->
+       <li>
+        <dl>
+            <dt>出行</dt>
+            <dd>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_11.png"/>
+                        <p class="info">按摩器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_2.png"/>
+                        <p class="info">扫地机器人（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_9.png"/>
+                        <p class="info">电动牙刷（21）</p>
+                    </a>
+                </div>
+            </dd>
+            <dd>
+                <div class="list">
+                    <a href="">
+                        <p class="info">冲牙器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">洁面仪（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">蒸面器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">加湿器（21）</p>
+                    </a>
+                </div>
+            </dd>
+        </dl>
+    </li>
+    <!-- 运动户外 -->
+    <li>
+        <dl>
+            <dt>运动户外</dt>
+            <dd>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_10.png"/>
+                        <p class="info">剃须刀（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_8.png"/>
+                        <p class="info">原汁机（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_5.png"/>
+                        <p class="info">净水壶（21）</p>
+                    </a>
+                </div>
+            </dd>
+            <dd>
+                <div class="list">
+                    <a href="">
+                        <p class="info">冲牙器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">洁面仪（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">蒸面器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">加湿器（21）</p>
+                    </a>
+                </div>
+            </dd>
+        </dl>
+    </li>
+    <!-- 摄影 -->
+    <li>
+        <dl>
+            <dt>摄影</dt>
+            <dd>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_3.png"/>
+                        <p class="info">电风扇（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_2.png"/>
+                        <p class="info">吸尘器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_9.png"/>
+                        <p class="info">电动牙刷（21）</p>
+                    </a>
+                </div>
+            </dd>
+            <dd>
+                <div class="list">
+                    <a href="">
+                        <p class="info">冲牙器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">洁面仪（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">蒸面器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">加湿器（21）</p>
+                    </a>
+                </div>
+            </dd>
+        </dl>
+    </li>
+    <!-- 手机 -->
+    <li>
+        <dl>
+            <dt>手机</dt>
+            <dd>
+                <div class="list">
+                    <a href="">
+                        <img src="./img/cat_11.png"/>
+                        <p class="info">按摩器（21）</p>
+                    </a>
+                </div>
+               
+            </dd>
+            <dd>
+                <div class="list">
+                    <a href="">
+                        <p class="info">冲牙器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">洁面仪（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">蒸面器（21）</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="info">加湿器（21）</p>
+                    </a>
+                </div>
+            </dd>
+        </dl>
+    </li>
+</div>
+ </three>
+</div>
+</div>  
+
+<div class="footer">
+    <footer class="foot">
+        <section class="wrap">
+            <div class="fix">
+                <dl><img src="img/code.png" width="200" height="200"/></dl>
+                <dl>
+                    <dt><img src="img/logoImg.jpg"/></dt>
+                    <dd>全球酷玩试用导购平台<br>酷·新奇·好玩·品质</dd>
+                    <dd>微信添加“JguoJguo” <br>获取我们的服务。</dd>
+                </dl>
+                <dl>
+                    <dt>免费试用</dt>
+                    <dd><a href="help.html#lc">试用流程</a></dd>
+                    <dd><a href="help.html#cg">如何提高成功率</a></dd>
+                </dl>
+                <dl>
+                    <dt>友情链接</dt>
+                    <dd><a href="#">智东西</a><a href="#">WEIBUSI</a></dd>
+                    <dd><a href="#">搜狐IT</a><a href="#">腾讯科技</a></dd>
+                    <dd><a href="#">搜狐数码</a><a href="#">凤凰科技</a></dd>
+                    <dd><a href="#">凤凰数码</a><a href="#">PConline</a></dd>
+                    <dd><a href="#">泡泡网</a><a href="#">3W咖啡</a></dd>
+                    <dd><a href="#">ZUK社区</a><a href="#">亿觅emie</a></dd>
+                    <dd><a href="#">极客公园</a><a href="#">易迅易启玩</a></dd>
+                    <dd><a href="#">果库</a></dd>
+                </dl>
+                <dl>
+                    <dt>购买攻略</dt>
+                    <dd><a href="#">美亚海淘教程</a></dd>
+                    <dd><a href="#">日亚海淘教程</a></dd>
+                    <dd><a href="#">海淘转运攻略</a></dd>
+                    <dd><a href="#">kickstarter 众筹购买攻略</a></dd>
+                    <dd><a href="#">indiegogo 众筹购买攻略</a></dd>
+                </dl>
+                <dl>
+                    <dt>厂商合作</dt>
+                    <dd><a href="about.html">关于极果</a></dd>
+                    <dd><a href="about.html#connect">联系我们</a></dd>
+                    <dd><a href="mailto:BD@jiguo.com">商务合作：BD@jiguo.com</a></dd>
+                    <dd><a href="mailto:CEO@jiguo.com">CEO邮箱：CEO@jiguo.com</a></dd>
+                </dl>
+            </div>
+           
+        </section>
+        
+    </footer>
+    <p class="copy">© 2016 极果版权所有</p>
+</div>
+</body>
+</html>
